@@ -266,20 +266,32 @@ const text = {
 };
 
 function App() {
-  const [lang, setLang] = useState("en"),
-    [filter, setFilter] = useState("All"),
-    [menu, setMenu] = useState(false);
+  const [lang, setLang] = useState("en");
+  const [filter, setFilter] = useState("All");
+  const [menu, setMenu] = useState(false);
+
   const t = text[lang];
+
   const ids = ["about", "projects", "skills", "contact"];
+
+  // เรียง Project จากปีล่าสุด → ปีเก่าสุด
+  const sortedProjects = [...projects].sort(
+    (a, b) => b.year - a.year
+  );
+
   const selected =
     filter === "All" || filter === "ทั้งหมด"
-      ? projects
-      : projects.filter((p) => p.cat.includes(filter));
-  const featured = projects.filter((p) => p.featured);
+      ? sortedProjects
+      : sortedProjects.filter((p) => p.cat.includes(filter));
+
   const go = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+    });
+
     setMenu(false);
   };
+
   return (
     <div className="app">
       <header>
