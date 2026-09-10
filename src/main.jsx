@@ -106,6 +106,19 @@ const projects = [
     year: 2026,
     yearTH: 2569,
   },
+  {
+    title: "Game porfolio",
+    titleTH: "Game porfolio",
+    cat: "Game Development",
+    catTH: "Game Development",
+    desc: "A prototype game developed using Unity and C# to hone and showcase my game development skills. This was the first game project I created entirely on my own, spanning the journey from learning the fundamentals of game development to applying that knowledge to build functional systems and a playable game.",
+    descTH:
+      "เกมต้นแบบที่พัฒนาขึ้นด้วย Unity และ C# เพื่อฝึกฝนและแสดงทักษะด้านการพัฒนาเกม โดยเป็นโปรเจกต์เกมแรกที่ผมพัฒนาขึ้นด้วยตนเอง ตั้งแต่การเรียนรู้พื้นฐานของ Game Development ไปจนถึงการนำความรู้มาสร้างเป็นระบบและเกมที่สามารถเล่นได้จริง",
+    stack: ["Unity", "C#"],
+    repo: GITHUB + "/Game_porfolio",
+    year: 2026,
+    yearTH: 2569,
+  },
 ];
 
 const text = {
@@ -142,7 +155,7 @@ const text = {
     ),
     workIntro:
       "Selected from my GitHub and presented around what each project demonstrates.",
-    filters: ["All", "Full-stack", "AI / Web", "Frontend", "Web"],
+    filters: ["All", "Full-stack", "AI / Web", "Frontend", "Web","Game Development"],
     count: "projects",
     repo: "View repository",
     toolkit: "03 — TOOLKIT",
@@ -225,7 +238,7 @@ const text = {
     ),
     workIntro:
       "คัดเลือกจาก GitHub และนำเสนอโดยเน้นสิ่งที่แต่ละ Project แสดงถึงความสามารถของผม",
-    filters: ["ทั้งหมด", "Full-stack", "AI / Web", "Frontend", "Web"],
+    filters: ["ทั้งหมด", "Full-stack", "AI / Web", "Frontend", "Web","Game Development"],
     count: "ผลงาน",
     repo: "ดู Repository",
     toolkit: "03 — เครื่องมือ",
