@@ -623,3 +623,34 @@ footer a:hover {
     flex-direction: column;
   }
 }
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.contact-item {
+  min-width: 190px;
+  padding: 14px 16px;
+  border: 1px solid #202934;
+  background: #0a0f15;
+}
+
+.contact-label {
+  display: block;
+  margin-bottom: 7px;
+  color: #626d7c;
+  font: 10px var(--mono);
+  letter-spacing: 0.12em;
+}
+
+.contact-value {
+  color: #dbe5ee;
+  font-size: 13px;
+}
+
+.contact-item:hover {
+  border-color: #3a4655;
+}

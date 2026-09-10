@@ -13,7 +13,15 @@ const projects = [
     desc: "Parking management and parking-finder web application.",
     descTH:
       "เว็บแอปพลิเคชันสำหรับค้นหาและจัดการข้อมูลลานจอดรถ รวมถึงประวัติการจอดและการคำนวณค่าบริการ",
-    stack: ["React", "HTML", "CSS" , "JavaScript" ,"Node.js", "Express", "MySQL"],
+    stack: [
+      "React",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "MySQL",
+    ],
     repo: GITHUB + "/_13-findparking",
     featured: true,
     year: 2025,
@@ -27,11 +35,19 @@ const projects = [
     catTH: "Full-stack",
     desc: "Online website for ordering Chinese-table catering services.",
     descTH: "เว็บไซต์สำหรับให้บริการและจัดการการสั่งโต๊ะจีนผ่านระบบออนไลน์",
-    stack: ["React", "JavaScript", "HTML", "CSS", "Node.js", "Express", "MongoDB"],
+    stack: [
+      "React",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Node.js",
+      "Express",
+      "MongoDB",
+    ],
     repo: GITHUB + "/Order-Chinese-tables-Website",
     featured: true,
-      year: 2024,
-      yearTH: 2567,
+    year: 2024,
+    yearTH: 2567,
   },
 
   {
@@ -42,7 +58,7 @@ const projects = [
     desc: "Career-consultation chatbot for IT careers using a RAG approach.",
     descTH:
       "แชตบอตให้คำปรึกษาด้านสายอาชีพ IT โดยใช้แนวคิด RAG เพื่อค้นหาและนำข้อมูลมาใช้ในการตอบคำถาม",
-    stack: ["Python", "RAG", "AI","JavaScript", "HTML", "CSS"],
+    stack: ["Python", "RAG", "AI", "JavaScript", "HTML", "CSS"],
     repo: GITHUB + "/FuturePath",
     featured: true,
     year: 2025,
@@ -85,7 +101,7 @@ const projects = [
     desc: "E-commerce website project for a university course.",
     descTH:
       "เว็บไซต์ E-commerce สำหรับร้านขายรองเท้า ซึ่งพัฒนาขึ้นเป็นส่วนหนึ่งของรายวิชาในมหาวิทยาลัย",
-    stack: ["ASP.NET Core MVC", "C#" , "HTML", "CSS", "JavaScript", "Bootstrap"],
+    stack: ["ASP.NET Core MVC", "C#", "HTML", "CSS", "JavaScript", "Bootstrap"],
     repo: GITHUB + "/ShoesStore",
     year: 2026,
     yearTH: 2569,
@@ -169,7 +185,7 @@ const text = {
       "I’m looking for a co-op / internship opportunity where I can contribute, learn from experienced developers, and grow through real software work.",
     email: "Email me ↗",
     linkedin: "LinkedIn ↗",
-    note: "",
+    note: "Phone: 090-232-4482",
     focus: [
       "Build real projects",
       "Understand the fundamentals",
@@ -256,7 +272,7 @@ const text = {
       "ผมกำลังมองหาโอกาสฝึกสหกิจศึกษา / ฝึกงาน ที่จะได้มีส่วนร่วมกับทีม เรียนรู้จากนักพัฒนาที่มีประสบการณ์ และเติบโตจากการทำงาน Software จริง",
     email: "ส่งอีเมล ↗",
     linkedin: "LinkedIn ↗",
-    note: "",
+    note: "เบอร์โทร: 090-232-4482",
     focus: [
       "สร้าง Project ที่ใช้งานได้จริง",
       "เข้าใจพื้นฐานอย่างแท้จริง",
@@ -275,9 +291,7 @@ function App() {
   const ids = ["about", "projects", "skills", "contact"];
 
   // เรียง Project จากปีล่าสุด → ปีเก่าสุด
-  const sortedProjects = [...projects].sort(
-    (a, b) => b.year - a.year
-  );
+  const sortedProjects = [...projects].sort((a, b) => b.year - a.year);
 
   const selected =
     filter === "All" || filter === "ทั้งหมด"
@@ -420,7 +434,7 @@ function App() {
               </div>
               <p>{t.workIntro}</p>
             </div>
-            
+
             <div className="filters">
               {t.filters.map((f) => (
                 <button
@@ -549,7 +563,23 @@ function App() {
                 {t.linkedin}
               </a>
             </div>
-            <small>{t.note}</small>
+            {/* <small>{t.note}</small> */}
+            <div className="contact-info">
+              <div className="contact-item">
+                <span className="contact-label">EMAIL</span>
+                <span className="contact-value">nawaphat.sidework@gmail.com</span>
+              </div>
+
+              <div className="contact-item">
+                <span className="contact-label">PHONE</span>
+                <span className="contact-value">090-232-4482</span>
+              </div>
+
+              <div className="contact-item">
+                <span className="contact-label">LINE</span>
+                <span className="contact-value">nigth-61</span>
+              </div>
+            </div>
           </div>
         </section>
       </main>
@@ -596,11 +626,7 @@ function Card({ p, n, t, lang }) {
           ))}
         </div>
 
-        <a
-          href={p.repo}
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href={p.repo} target="_blank" rel="noreferrer">
           {t.repo} ↗
         </a>
       </div>
